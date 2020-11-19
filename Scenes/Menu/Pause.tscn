@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Menu/NameScenePause.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Menu/Buttons/MainMenuButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Menu/Buttons/MainMenuButton.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Menu/Buttons/MenuButtonResume.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Menu/Buttons/MenuButtonResume.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Menu/Pause.gd" type="Script" id=6]
+
+[node name="Pause" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="NameScene" parent="." instance=ExtResource( 1 )]
+margin_right = 1925.0
+margin_bottom = 137.0
+align = 1
+
+[node name="MainMenuButton" parent="." instance=ExtResource( 2 )]
+margin_left = 511.456
+margin_top = 694.308
+margin_right = 1437.46
+margin_bottom = 928.308
+script = ExtResource( 3 )
+
+[node name="ResumeButton" parent="." instance=ExtResource( 4 )]
+margin_left = 630.708
+margin_top = 442.555
+margin_right = 1265.71
+margin_bottom = 676.555
+script = ExtResource( 5 )
+[connection signal="pressed" from="MainMenuButton" to="MainMenuButton" method="_on_MainMenuButton_pressed"]
+[connection signal="pressed" from="ResumeButton" to="ResumeButton" method="_on_ResumeButton_pressed"]

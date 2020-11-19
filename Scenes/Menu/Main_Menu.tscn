@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Menu/Buttons/QuitButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Menu/Buttons/PlayButton.tscn" type="PackedScene" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/fonts/OsakaChips-K7d0D.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 200
+font_data = SubResource( 1 )
+
+[node name="Title_screen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = -2.51755
+margin_right = 895.0
+margin_bottom = 477.482
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 80.0
+margin_top = 40.0
+margin_right = 1840.0
+margin_bottom = 1000.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_right = 1760.0
+margin_bottom = 238.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 1, 0, 0.447059, 1 )
+text = "Terminal Dungeon"
+align = 1
+
+[node name="MainRow" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 242.0
+margin_right = 1760.0
+margin_bottom = 960.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="buttons" type="VBoxContainer" parent="VBoxContainer/MainRow"]
+margin_right = 1760.0
+margin_bottom = 718.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" parent="VBoxContainer/MainRow/buttons" instance=ExtResource( 2 )]
+margin_top = 119.0
+margin_right = 1760.0
+margin_bottom = 357.0
+
+[node name="QuitButton" parent="VBoxContainer/MainRow/buttons" instance=ExtResource( 1 )]
+margin_top = 361.0
+margin_right = 1760.0
+margin_bottom = 599.0

@@ -1,0 +1,674 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://Assets/sprites/Shop/shop_table.png" type="Texture" id=1]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/left_pressed.png" type="Texture" id=2]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/right.png" type="Texture" id=3]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/right_hover.png" type="Texture" id=4]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/right_pressed.png" type="Texture" id=5]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/right_locked.png" type="Texture" id=6]
+[ext_resource path="res://Assets/sprites/Shop/shop_title.png" type="Texture" id=7]
+[ext_resource path="res://Assets/sprites/Shop/Items/right botton map.png" type="Texture" id=8]
+[ext_resource path="res://Assets/sprites/Shop/canvas.png" type="Texture" id=9]
+[ext_resource path="res://Assets/sprites/Shop/Font/Luis Candara.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Scenes/Shop/right botton map.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/Shop/Shop.gd" type="Script" id=12]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/left_hover.png" type="Texture" id=13]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/left_locked.png" type="Texture" id=14]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/left.png" type="Texture" id=15]
+[ext_resource path="res://Scenes/Shop/LeftButton.gd" type="Script" id=16]
+[ext_resource path="res://Assets/sprites/Shop/Items/up botton map.png" type="Texture" id=17]
+[ext_resource path="res://Assets/sprites/Shop/Items/left botton map.png" type="Texture" id=18]
+[ext_resource path="res://Scenes/Shop/UpBottonMap.gd" type="Script" id=19]
+[ext_resource path="res://Scenes/Shop/LeftBottonMap.gd" type="Script" id=20]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/coin.png" type="Texture" id=21]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/coin_locked.png" type="Texture" id=22]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/coin_pressed.png" type="Texture" id=23]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/coin_hover.png" type="Texture" id=24]
+[ext_resource path="res://Assets/sprites/Shop/Buttons/accept.png" type="Texture" id=25]
+[ext_resource path="res://Assets/sprites/Shop/Items/move_commands.png" type="Texture" id=26]
+[ext_resource path="res://Scenes/Shop/MoveCommands.gd" type="Script" id=27]
+[ext_resource path="res://Assets/sprites/Shop/Items/take_command.png" type="Texture" id=28]
+[ext_resource path="res://Scenes/Shop/TakeCommand.gd" type="Script" id=29]
+[ext_resource path="res://Scenes/Shop/OpenCommand.gd" type="Script" id=30]
+[ext_resource path="res://Assets/sprites/Shop/Items/open_command.png" type="Texture" id=31]
+[ext_resource path="res://Assets/sprites/Shop/Items/down botton map.png" type="Texture" id=32]
+[ext_resource path="res://Scenes/Shop/DownBottonMap.gd" type="Script" id=33]
+[ext_resource path="res://Assets/sprites/Shop/Items/open.png" type="Texture" id=34]
+[ext_resource path="res://Scenes/Shop/OpenBotton.gd" type="Script" id=35]
+[ext_resource path="res://Assets/sprites/Shop/Items/take.png" type="Texture" id=36]
+[ext_resource path="res://Scenes/Shop/TakeBotton.gd" type="Script" id=37]
+[ext_resource path="res://Scenes/Shop/Attack.gd" type="Script" id=38]
+[ext_resource path="res://Assets/sprites/Shop/Items/sword.png" type="Texture" id=39]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 150
+font_data = ExtResource( 10 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 12 )
+
+[node name="shop" type="Sprite" parent="."]
+position = Vector2( 959.762, 539.486 )
+scale = Vector2( 0.567622, 0.572973 )
+texture = ExtResource( 1 )
+
+[node name="shop_title" type="Sprite" parent="shop"]
+position = Vector2( 51.569, -496.021 )
+scale = Vector2( 0.805836, 0.798311 )
+texture = ExtResource( 7 )
+
+[node name="canvas1" type="Sprite" parent="shop"]
+position = Vector2( -719.656, 28.5326 )
+scale = Vector2( 1.76173, 1.74528 )
+texture = ExtResource( 9 )
+
+[node name="canvas2" type="Sprite" parent="shop"]
+position = Vector2( 21.7249, 31.9324 )
+scale = Vector2( 1.76173, 1.74528 )
+texture = ExtResource( 9 )
+
+[node name="canvas3" type="Sprite" parent="shop"]
+position = Vector2( 752.718, 28.5325 )
+scale = Vector2( 1.76173, 1.74528 )
+texture = ExtResource( 9 )
+
+[node name="RightButton" type="TextureButton" parent="shop"]
+margin_left = 1310.98
+margin_top = -227.0
+margin_right = 1548.98
+margin_bottom = 11.0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+texture_disabled = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RightBottonMap" type="Sprite" parent="shop"]
+position = Vector2( 1475.17, -71.7644 )
+scale = Vector2( 2.3482, 2.32627 )
+texture = ExtResource( 8 )
+script = ExtResource( 11 )
+
+[node name="MoveToRight" type="RichTextLabel" parent="shop/RightBottonMap"]
+margin_left = -135.461
+margin_top = 117.692
+margin_right = 141.539
+margin_bottom = 174.692
+size_flags_horizontal = 3
+custom_fonts/bold_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]MOVE TO RIGHT[/center][/b]"
+text = "MOVE TO RIGHT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinRight" type="TextureButton" parent="shop/RightBottonMap"]
+margin_left = 95.9225
+margin_top = 59.615
+margin_right = 135.922
+margin_bottom = 99.615
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/RightBottonMap/CoinRight"]
+margin_left = -47.078
+margin_top = -10.5572
+margin_right = -7.078
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/RightBottonMap"]
+visible = false
+position = Vector2( 107.185, 71.6138 )
+scale = Vector2( 0.0770662, 0.0770662 )
+texture = ExtResource( 25 )
+
+[node name="MoveCommands" type="Sprite" parent="shop"]
+position = Vector2( -724.713, -71.764 )
+scale = Vector2( 2.3482, 2.32627 )
+texture = ExtResource( 26 )
+script = ExtResource( 27 )
+
+[node name="UpLeftDown" type="RichTextLabel" parent="shop/MoveCommands"]
+margin_left = -135.461
+margin_top = 117.692
+margin_right = 141.539
+margin_bottom = 174.692
+size_flags_horizontal = 3
+custom_fonts/bold_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]UP/LEFT/DOWN[/center][/b]"
+text = "UP/LEFT/DOWN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinMove" type="TextureButton" parent="shop/MoveCommands"]
+margin_left = 95.9225
+margin_top = 59.615
+margin_right = 135.922
+margin_bottom = 99.615
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/MoveCommands/CoinMove"]
+margin_left = -42.5765
+margin_top = -10.5572
+margin_right = -2.57648
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/MoveCommands"]
+visible = false
+position = Vector2( 107.185, 71.6138 )
+scale = Vector2( 0.0770662, 0.0770662 )
+texture = ExtResource( 25 )
+
+[node name="TakeCommand" type="Sprite" parent="shop"]
+position = Vector2( 747.605, -68.2735 )
+scale = Vector2( 2.3482, 2.32627 )
+texture = ExtResource( 28 )
+script = ExtResource( 29 )
+
+[node name="Take" type="RichTextLabel" parent="shop/TakeCommand"]
+margin_left = -135.461
+margin_top = 117.692
+margin_right = 141.539
+margin_bottom = 174.692
+size_flags_horizontal = 3
+custom_fonts/bold_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]TAKE[/center][/b]"
+text = "TAKE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinTake" type="TextureButton" parent="shop/TakeCommand"]
+margin_left = 95.9225
+margin_top = 59.615
+margin_right = 135.922
+margin_bottom = 99.615
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/TakeCommand/CoinTake"]
+margin_left = -46.3277
+margin_top = -10.5572
+margin_right = -6.3277
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/TakeCommand"]
+visible = false
+position = Vector2( 107.185, 71.6138 )
+scale = Vector2( 0.0770662, 0.0770662 )
+texture = ExtResource( 25 )
+
+[node name="OpenCommand" type="Sprite" parent="shop"]
+position = Vector2( 12.9613, -68.2735 )
+scale = Vector2( 2.3482, 2.32627 )
+texture = ExtResource( 31 )
+script = ExtResource( 30 )
+
+[node name="Open" type="RichTextLabel" parent="shop/OpenCommand"]
+margin_left = -135.461
+margin_top = 117.692
+margin_right = 141.539
+margin_bottom = 174.692
+size_flags_horizontal = 3
+custom_fonts/bold_font = SubResource( 1 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]OPEN[/center][/b]"
+text = "OPEN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinOpen" type="TextureButton" parent="shop/OpenCommand"]
+margin_left = 95.9225
+margin_top = 59.615
+margin_right = 135.922
+margin_bottom = 99.615
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/OpenCommand/CoinOpen"]
+margin_left = -46.3277
+margin_top = -10.5572
+margin_right = -6.3277
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/OpenCommand"]
+visible = false
+position = Vector2( 107.185, 71.6138 )
+scale = Vector2( 0.0770662, 0.0770662 )
+texture = ExtResource( 25 )
+
+[node name="LeftButton" type="TextureButton" parent="shop"]
+margin_left = -1543.28
+margin_top = -227.0
+margin_right = -1305.28
+margin_bottom = 11.0
+disabled = true
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 14 )
+expand = true
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpBottonMap" type="Sprite" parent="shop"]
+position = Vector2( 2229.81, -71.7639 )
+scale = Vector2( 2.348, 2.326 )
+texture = ExtResource( 17 )
+script = ExtResource( 19 )
+
+[node name="MoveToUp" type="RichTextLabel" parent="shop/UpBottonMap"]
+margin_left = -140.0
+margin_top = 121.77
+margin_right = 135.0
+margin_bottom = 174.77
+custom_fonts/bold_font = SubResource( 2 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]MOVE TO UP[/center][/b]"
+text = "MOVE TO UP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinUp" type="TextureButton" parent="shop/UpBottonMap"]
+margin_left = 91.9129
+margin_top = 59.6217
+margin_right = 131.913
+margin_bottom = 99.6217
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/UpBottonMap/CoinUp"]
+margin_left = -47.078
+margin_top = -10.5572
+margin_right = -7.078
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/UpBottonMap"]
+visible = false
+position = Vector2( 104.428, 71.614 )
+scale = Vector2( 0.0770728, 0.0770752 )
+texture = ExtResource( 25 )
+
+[node name="LeftBottonMap" type="Sprite" parent="shop"]
+position = Vector2( 2957.46, -71.7639 )
+scale = Vector2( 2.348, 2.326 )
+texture = ExtResource( 18 )
+script = ExtResource( 20 )
+
+[node name="MoveToLeft" type="RichTextLabel" parent="shop/LeftBottonMap"]
+margin_left = -137.0
+margin_top = 121.0
+margin_right = 135.0
+margin_bottom = 173.0
+custom_fonts/bold_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]MOVE TO LEFT[/center][/b]"
+text = "MOVE TO LEFT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinLeft" type="TextureButton" parent="shop/LeftBottonMap"]
+margin_left = 94.1445
+margin_top = 59.6217
+margin_right = 134.145
+margin_bottom = 99.6217
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/LeftBottonMap/CoinLeft"]
+margin_left = -47.078
+margin_top = -10.5572
+margin_right = -7.078
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/LeftBottonMap"]
+visible = false
+position = Vector2( 105.855, 71.6143 )
+scale = Vector2( 0.0770728, 0.0770752 )
+texture = ExtResource( 25 )
+
+[node name="DownBottonMap" type="Sprite" parent="shop"]
+position = Vector2( 3698, -71.764 )
+scale = Vector2( 2.348, 2.326 )
+texture = ExtResource( 32 )
+script = ExtResource( 33 )
+
+[node name="MoveToDown" type="RichTextLabel" parent="shop/DownBottonMap"]
+margin_left = -137.0
+margin_top = 121.0
+margin_right = 135.0
+margin_bottom = 173.0
+custom_fonts/bold_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]MOVE TO DOWN[/center][/b]"
+text = "MOVE TO DOWN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinDown" type="TextureButton" parent="shop/DownBottonMap"]
+margin_left = 94.1445
+margin_top = 59.6217
+margin_right = 134.145
+margin_bottom = 99.6217
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/DownBottonMap/CoinDown"]
+margin_left = -47.078
+margin_top = -10.5572
+margin_right = -7.078
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/DownBottonMap"]
+visible = false
+position = Vector2( 105.855, 71.6143 )
+scale = Vector2( 0.0770728, 0.0770752 )
+texture = ExtResource( 25 )
+
+[node name="OpenBotton" type="Sprite" parent="shop"]
+position = Vector2( 4439, -71.764 )
+scale = Vector2( 2.348, 2.326 )
+texture = ExtResource( 34 )
+script = ExtResource( 35 )
+
+[node name="Open" type="RichTextLabel" parent="shop/OpenBotton"]
+margin_left = -137.0
+margin_top = 121.0
+margin_right = 135.0
+margin_bottom = 173.0
+custom_fonts/bold_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]OPEN[/center][/b]"
+text = "OPEN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinOpenButton" type="TextureButton" parent="shop/OpenBotton"]
+margin_left = 94.1445
+margin_top = 59.6217
+margin_right = 134.145
+margin_bottom = 99.6217
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/OpenBotton/CoinOpenButton"]
+margin_left = -47.078
+margin_top = -10.5572
+margin_right = -7.078
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/OpenBotton"]
+visible = false
+position = Vector2( 105.855, 71.6143 )
+scale = Vector2( 0.0770728, 0.0770752 )
+texture = ExtResource( 25 )
+
+[node name="TakeBotton" type="Sprite" parent="shop"]
+position = Vector2( 5180, -71.764 )
+scale = Vector2( 2.348, 2.326 )
+texture = ExtResource( 36 )
+script = ExtResource( 37 )
+
+[node name="Take" type="RichTextLabel" parent="shop/TakeBotton"]
+margin_left = -137.0
+margin_top = 121.0
+margin_right = 135.0
+margin_bottom = 173.0
+custom_fonts/bold_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]TAKE[/center][/b]"
+text = "TAKE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinTakeButton" type="TextureButton" parent="shop/TakeBotton"]
+margin_left = 94.1445
+margin_top = 59.6217
+margin_right = 134.145
+margin_bottom = 99.6217
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/TakeBotton/CoinTakeButton"]
+margin_left = -47.078
+margin_top = -10.5572
+margin_right = -7.078
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/TakeBotton"]
+visible = false
+position = Vector2( 105.855, 71.6143 )
+scale = Vector2( 0.0770728, 0.0770752 )
+texture = ExtResource( 25 )
+
+[node name="Attack" type="Sprite" parent="shop"]
+position = Vector2( 5921, -71.764 )
+scale = Vector2( 2.348, 2.326 )
+texture = ExtResource( 39 )
+script = ExtResource( 38 )
+
+[node name="Attack" type="RichTextLabel" parent="shop/Attack"]
+margin_left = -137.0
+margin_top = 121.0
+margin_right = 135.0
+margin_bottom = 173.0
+custom_fonts/bold_font = SubResource( 3 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][center]ATTACK[/center][/b]"
+text = "ATTACK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinAttack" type="TextureButton" parent="shop/Attack"]
+margin_left = 94.1445
+margin_top = 59.6217
+margin_right = 134.145
+margin_bottom = 99.6217
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 23 )
+texture_hover = ExtResource( 24 )
+texture_disabled = ExtResource( 22 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Price" type="RichTextLabel" parent="shop/Attack/CoinAttack"]
+margin_left = -47.078
+margin_top = -10.5572
+margin_right = -7.078
+margin_bottom = 42.4428
+custom_fonts/bold_font = SubResource( 5 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accepted" type="Sprite" parent="shop/Attack"]
+visible = false
+position = Vector2( 105.855, 71.6143 )
+scale = Vector2( 0.0770728, 0.0770752 )
+texture = ExtResource( 25 )
+
+[node name="Coins" type="Sprite" parent="shop"]
+position = Vector2( 1045.59, -593.64 )
+scale = Vector2( 0.802711, 0.795215 )
+texture = ExtResource( 21 )
+
+[node name="NbCoins" type="RichTextLabel" parent="shop/Coins"]
+margin_left = -435.377
+margin_top = -94.0
+margin_right = -122.377
+margin_bottom = 83.0
+custom_fonts/bold_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0.47451, 0.698039, 1 )
+bbcode_enabled = true
+bbcode_text = "[b][right]0[/right][/b]"
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="shop/RightButton" to="." method="_on_RightButton_pressed"]
+[connection signal="pressed" from="shop/RightBottonMap/CoinRight" to="." method="_on_CoinRight_pressed"]
+[connection signal="pressed" from="shop/MoveCommands/CoinMove" to="." method="_on_CoinMove_pressed"]
+[connection signal="pressed" from="shop/TakeCommand/CoinTake" to="." method="_on_CoinTake_pressed"]
+[connection signal="pressed" from="shop/OpenCommand/CoinOpen" to="." method="_on_CoinOpen_pressed"]
+[connection signal="pressed" from="shop/LeftButton" to="." method="_on_LeftButton_pressed"]
+[connection signal="pressed" from="shop/UpBottonMap/CoinUp" to="." method="_on_CoinUp_pressed"]
+[connection signal="pressed" from="shop/LeftBottonMap/CoinLeft" to="." method="_on_CoinLeft_pressed"]
+[connection signal="pressed" from="shop/DownBottonMap/CoinDown" to="." method="_on_CoinDown_pressed"]
+[connection signal="pressed" from="shop/OpenBotton/CoinOpenButton" to="." method="_on_CoinOpenButton_pressed"]
+[connection signal="pressed" from="shop/TakeBotton/CoinTakeButton" to="." method="_on_CoinTakeButton_pressed"]
+[connection signal="pressed" from="shop/Attack/CoinAttack" to="." method="_on_CoinAttack_pressed"]
